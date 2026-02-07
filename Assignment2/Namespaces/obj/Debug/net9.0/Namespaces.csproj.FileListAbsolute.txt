@@ -1,5 +1,0 @@
-F:\dotnet\Assignment2\Namespaces\obj\Debug\net9.0\Namespaces.GeneratedMSBuildEditorConfig.editorconfig
-F:\dotnet\Assignment2\Namespaces\obj\Debug\net9.0\Namespaces.AssemblyInfoInputs.cache
-F:\dotnet\Assignment2\Namespaces\obj\Debug\net9.0\Namespaces.AssemblyInfo.cs
-F:\dotnet\Assignment2\Namespaces\obj\Debug\net9.0\Namespaces.csproj.CoreCompileInputs.cache
-F:\dotnet\Assignment2\Namespaces\obj\Debug\net9.0\Namespaces.sourcelink.json
