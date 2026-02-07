@@ -1,0 +1,15 @@
+F:\dotnet\Assignment2\FistProgram\obj\Debug\net9.0\FirstProgram.GeneratedMSBuildEditorConfig.editorconfig
+F:\dotnet\Assignment2\FistProgram\obj\Debug\net9.0\FirstProgram.AssemblyInfoInputs.cache
+F:\dotnet\Assignment2\FistProgram\obj\Debug\net9.0\FirstProgram.AssemblyInfo.cs
+F:\dotnet\Assignment2\FistProgram\obj\Debug\net9.0\FirstProgram.csproj.CoreCompileInputs.cache
+F:\dotnet\Assignment2\FistProgram\obj\Debug\net9.0\FirstProgram.sourcelink.json
+F:\dotnet\Assignment2\FistProgram\bin\Debug\net9.0\FirstProgram.exe
+F:\dotnet\Assignment2\FistProgram\bin\Debug\net9.0\FirstProgram.deps.json
+F:\dotnet\Assignment2\FistProgram\bin\Debug\net9.0\FirstProgram.runtimeconfig.json
+F:\dotnet\Assignment2\FistProgram\bin\Debug\net9.0\FirstProgram.dll
+F:\dotnet\Assignment2\FistProgram\bin\Debug\net9.0\FirstProgram.pdb
+F:\dotnet\Assignment2\FistProgram\obj\Debug\net9.0\FirstProgram.dll
+F:\dotnet\Assignment2\FistProgram\obj\Debug\net9.0\refint\FirstProgram.dll
+F:\dotnet\Assignment2\FistProgram\obj\Debug\net9.0\FirstProgram.pdb
+F:\dotnet\Assignment2\FistProgram\obj\Debug\net9.0\FirstProgram.genruntimeconfig.cache
+F:\dotnet\Assignment2\FistProgram\obj\Debug\net9.0\ref\FirstProgram.dll

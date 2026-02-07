@@ -1,0 +1,15 @@
+F:\dotnet\Day4\Polymorphism\bin\Debug\net9.0\Polymorphism.exe
+F:\dotnet\Day4\Polymorphism\bin\Debug\net9.0\Polymorphism.deps.json
+F:\dotnet\Day4\Polymorphism\bin\Debug\net9.0\Polymorphism.runtimeconfig.json
+F:\dotnet\Day4\Polymorphism\bin\Debug\net9.0\Polymorphism.dll
+F:\dotnet\Day4\Polymorphism\bin\Debug\net9.0\Polymorphism.pdb
+F:\dotnet\Day4\Polymorphism\obj\Debug\net9.0\Polymorphism.GeneratedMSBuildEditorConfig.editorconfig
+F:\dotnet\Day4\Polymorphism\obj\Debug\net9.0\Polymorphism.AssemblyInfoInputs.cache
+F:\dotnet\Day4\Polymorphism\obj\Debug\net9.0\Polymorphism.AssemblyInfo.cs
+F:\dotnet\Day4\Polymorphism\obj\Debug\net9.0\Polymorphism.csproj.CoreCompileInputs.cache
+F:\dotnet\Day4\Polymorphism\obj\Debug\net9.0\Polymorphism.sourcelink.json
+F:\dotnet\Day4\Polymorphism\obj\Debug\net9.0\Polymorphism.dll
+F:\dotnet\Day4\Polymorphism\obj\Debug\net9.0\refint\Polymorphism.dll
+F:\dotnet\Day4\Polymorphism\obj\Debug\net9.0\Polymorphism.pdb
+F:\dotnet\Day4\Polymorphism\obj\Debug\net9.0\Polymorphism.genruntimeconfig.cache
+F:\dotnet\Day4\Polymorphism\obj\Debug\net9.0\ref\Polymorphism.dll

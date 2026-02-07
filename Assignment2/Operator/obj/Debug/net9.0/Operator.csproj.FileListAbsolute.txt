@@ -1,0 +1,15 @@
+F:\dotnet\Assignment2\Operator\obj\Debug\net9.0\Operator.GeneratedMSBuildEditorConfig.editorconfig
+F:\dotnet\Assignment2\Operator\obj\Debug\net9.0\Operator.AssemblyInfoInputs.cache
+F:\dotnet\Assignment2\Operator\obj\Debug\net9.0\Operator.AssemblyInfo.cs
+F:\dotnet\Assignment2\Operator\obj\Debug\net9.0\Operator.csproj.CoreCompileInputs.cache
+F:\dotnet\Assignment2\Operator\obj\Debug\net9.0\Operator.sourcelink.json
+F:\dotnet\Assignment2\Operator\bin\Debug\net9.0\Operator.exe
+F:\dotnet\Assignment2\Operator\bin\Debug\net9.0\Operator.deps.json
+F:\dotnet\Assignment2\Operator\bin\Debug\net9.0\Operator.runtimeconfig.json
+F:\dotnet\Assignment2\Operator\bin\Debug\net9.0\Operator.dll
+F:\dotnet\Assignment2\Operator\bin\Debug\net9.0\Operator.pdb
+F:\dotnet\Assignment2\Operator\obj\Debug\net9.0\Operator.dll
+F:\dotnet\Assignment2\Operator\obj\Debug\net9.0\refint\Operator.dll
+F:\dotnet\Assignment2\Operator\obj\Debug\net9.0\Operator.pdb
+F:\dotnet\Assignment2\Operator\obj\Debug\net9.0\Operator.genruntimeconfig.cache
+F:\dotnet\Assignment2\Operator\obj\Debug\net9.0\ref\Operator.dll

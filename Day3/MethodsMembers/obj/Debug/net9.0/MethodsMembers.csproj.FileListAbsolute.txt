@@ -1,0 +1,15 @@
+F:\dotnet\Day3\MethodsMembers\obj\Debug\net9.0\MethodsMembers.GeneratedMSBuildEditorConfig.editorconfig
+F:\dotnet\Day3\MethodsMembers\obj\Debug\net9.0\MethodsMembers.AssemblyInfoInputs.cache
+F:\dotnet\Day3\MethodsMembers\obj\Debug\net9.0\MethodsMembers.AssemblyInfo.cs
+F:\dotnet\Day3\MethodsMembers\obj\Debug\net9.0\MethodsMembers.csproj.CoreCompileInputs.cache
+F:\dotnet\Day3\MethodsMembers\obj\Debug\net9.0\MethodsMembers.sourcelink.json
+F:\dotnet\Day3\MethodsMembers\bin\Debug\net9.0\MethodsMembers.exe
+F:\dotnet\Day3\MethodsMembers\bin\Debug\net9.0\MethodsMembers.deps.json
+F:\dotnet\Day3\MethodsMembers\bin\Debug\net9.0\MethodsMembers.runtimeconfig.json
+F:\dotnet\Day3\MethodsMembers\bin\Debug\net9.0\MethodsMembers.dll
+F:\dotnet\Day3\MethodsMembers\bin\Debug\net9.0\MethodsMembers.pdb
+F:\dotnet\Day3\MethodsMembers\obj\Debug\net9.0\MethodsMembers.dll
+F:\dotnet\Day3\MethodsMembers\obj\Debug\net9.0\refint\MethodsMembers.dll
+F:\dotnet\Day3\MethodsMembers\obj\Debug\net9.0\MethodsMembers.pdb
+F:\dotnet\Day3\MethodsMembers\obj\Debug\net9.0\MethodsMembers.genruntimeconfig.cache
+F:\dotnet\Day3\MethodsMembers\obj\Debug\net9.0\ref\MethodsMembers.dll

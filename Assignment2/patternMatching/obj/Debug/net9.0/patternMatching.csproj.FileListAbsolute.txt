@@ -1,0 +1,15 @@
+F:\dotnet\Assignment2\patternMatching\obj\Debug\net9.0\patternMatching.GeneratedMSBuildEditorConfig.editorconfig
+F:\dotnet\Assignment2\patternMatching\obj\Debug\net9.0\patternMatching.AssemblyInfoInputs.cache
+F:\dotnet\Assignment2\patternMatching\obj\Debug\net9.0\patternMatching.AssemblyInfo.cs
+F:\dotnet\Assignment2\patternMatching\obj\Debug\net9.0\patternMatching.csproj.CoreCompileInputs.cache
+F:\dotnet\Assignment2\patternMatching\obj\Debug\net9.0\patternMatching.sourcelink.json
+F:\dotnet\Assignment2\patternMatching\bin\Debug\net9.0\patternMatching.exe
+F:\dotnet\Assignment2\patternMatching\bin\Debug\net9.0\patternMatching.deps.json
+F:\dotnet\Assignment2\patternMatching\bin\Debug\net9.0\patternMatching.runtimeconfig.json
+F:\dotnet\Assignment2\patternMatching\bin\Debug\net9.0\patternMatching.dll
+F:\dotnet\Assignment2\patternMatching\bin\Debug\net9.0\patternMatching.pdb
+F:\dotnet\Assignment2\patternMatching\obj\Debug\net9.0\patternMatching.dll
+F:\dotnet\Assignment2\patternMatching\obj\Debug\net9.0\refint\patternMatching.dll
+F:\dotnet\Assignment2\patternMatching\obj\Debug\net9.0\patternMatching.pdb
+F:\dotnet\Assignment2\patternMatching\obj\Debug\net9.0\patternMatching.genruntimeconfig.cache
+F:\dotnet\Assignment2\patternMatching\obj\Debug\net9.0\ref\patternMatching.dll
