@@ -8,4 +8,6 @@ obj/
 *.suo
 
 # VS Code
-.vscode/
+*.dll
+*.exe
+*.pdb
