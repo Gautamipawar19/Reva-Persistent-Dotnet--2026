@@ -2,12 +2,47 @@
 using System;
 
 namespace GenericDelegate;
+
+    public class OnclickEventArgs :EventArgs
+    {
+        public string ButtonName{get; set;}
+    }
+    //Publisher
+    public class Button
+    {
+        public delegate void OnClickHandler();
+
+        public event OnClickHandler OnClick;
+
+        //Informing subscribers that the button was clicked
+
+        public void Click()
+        {
+            OnClick?.Invoke();
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
             DelegatesDemoApp app = new DelegatesDemoApp();
-            app.Run();
+            // app.Run();
+            // app.LamdaExpressionDemo();
+            // app.AnonynomusMethodDemo();
+            // app.HigherOrderFunctionDemo();
+
+            Button button = new Button();
+
+            //Subscriber Dool Bell
+            button.OnClick += () => Console.WriteLine("Bill Rings!");
+
+            //Subscriber Electricity Board
+            button.OnClick += () => Console.WriteLine("Chargs for Electricity!");
+            button.OnClick += () => Console.WriteLine("third!");
+            button.OnClick += () => Console.WriteLine("fourth!");
+
+            //Raise Event
+            button.Click();
         }
     }
 
@@ -24,6 +59,24 @@ namespace GenericDelegate;
 
     class DelegatesDemoApp
     {
+    
+        public void HigherOrderFunctionDemo(){
+            // var result = CalculateArea(AreaOfRectangle);
+                var result = CalculateArea(AreaOfTriangle);
+            Console.WriteLine($"Area: {result}");
+        }
+        int CalculateArea(Func<int, int, int> areaFunction)
+        {
+            return areaFunction(5, 10);
+        }
+
+        int AreaOfRectangle(int length, int width){
+            return length * width;
+        }
+        int AreaOfTriangle(int baseLength, int height){
+            return (baseLength * height) / 2;
+        }
+
         public void LamdaExpressionDemo(){
             Func<int, int> f;
             f = (int x) => x * x; // Lambda expression for squaring a number
