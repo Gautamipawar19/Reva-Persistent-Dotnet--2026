@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Foundations</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #fdfcf9;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      border-bottom: 4px solid #1a1a1a;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 3rem;
+      padding: 0.4rem 0.8rem;
+      background: #1a1a1a;
+      color: #fdfcf9;
+      display: inline-block;
+    }
+
+    p.definition {
+      font-style: italic;
+      color: #444;
+      border-left: 3px solid #ccc;
+      padding-left: 1rem;
+      margin: 0.8rem 0 1.2rem;
+    }
+
+    .demo-box {
+      border: 2px dashed #aaa;
+      padding: 1rem;
+      margin: 1rem 0;
+      background: #fff;
+    }
+
+    nav {
+      background: #1a1a1a;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      color: #fdfcf9;
+      text-decoration: none;
+      margin-right: 1rem;
+      font-size: 0.85rem;
+      font-family: monospace;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 0.5rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background: #f0f0f0;
+    }
+
+    code {
+      background: #f0f0ee;
+      padding: 0.1rem 0.3rem;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>HTML Foundations</h1>
+
+  <nav>
+    <a style="display:block" href="#http-intro">HTTP Intro</a>
+    <a style="display:block" href="#http-methods">HTTP Methods</a>
+    <a style="display:block" href="#dom">DOM</a>
+    <a style="display:block" href="#elements">Elements</a>
+    <a style="display:block" href="#inline-block">Inline vs Block</a>
+    <a style="display:block" href="#common-tags">Common Tags</a>
+    <a style="display:block" href="#semantic">Semantic HTML5</a>
+    <a style="display:block" href="#forms">Forms</a>
+    <a style="display:block" href="#form-elements">Form Elements</a>
+    <a style="display:block" href="#validation">HTML5 Validation</a>
+  </nav>
+
+  <!-- Introduction to HTTP -->
+  <section id="http-intro">
+    <h2>Introduction to HTTP</h2>
+    <p class="definition">
+      HTTP (HyperText Transfer Protocol) is the communication protocol that powers the web.
+      When your browser loads a page, it sends an HTTP request to a server, and the server sends back an HTTP response
+      containing HTML.
+    </p>
+    <div class="demo-box">
+      <p><strong>Request:</strong> Browser asks — <code>GET /index.html HTTP/1.1</code></p>
+      <p><strong>Response:</strong> Server replies — <code>200 OK</code> + the HTML document</p>
+      <p><strong>Think of it like:</strong> You walk into a library (browser), ask for a book (request), and the
+        librarian hands it to you (response).</p>
+    </div>
+  </section>
+
+  <!-- HTTP Methods and Status Codes -->
+  <section id="http-methods">
+    <h2>HTTP Methods and Status Codes</h2>
+    <p class="definition">
+      HTTP Methods describe the action the browser wants to perform. Status Codes tell you what happened on the server
+      side — success, failure, or something in between.
+    </p>
+    <div class="demo-box">
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Purpose</th>
+          <th>Real World Analogy</th>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>Fetch a resource</td>
+          <td>Reading a menu</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>Send new data</td>
+          <td>Placing an order</td>
+        </tr>
+        <tr>
+          <td>PUT</td>
+          <td>Replace existing data</td>
+          <td>Replacing an order</td>
+        </tr>
+        <tr>
+          <td>PATCH</td>
+          <td>Update part of data</td>
+          <td>Modifying one item in order</td>
+        </tr>
+        <tr>
+          <td>DELETE</td>
+          <td>Remove a resource</td>
+          <td>Cancelling an order</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>Status Code</th>
+          <th>Meaning</th>
+        </tr>
+        <tr>
+          <td>2XX</td>
+          <td>OK — everything worked</td>
+        </tr>
+        <tr>
+          <td>301</td>
+          <td>Moved Permanently — page has a new URL</td>
+        </tr>
+        <tr>
+          <td>404</td>
+          <td>Not Found — page doesn't exist</td>
+        </tr>
+        <tr>
+          <td>500</td>
+          <td>Server Error — something broke on the server</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- HTML Document Structure and DOM -->
+  <section id="dom">
+    <h2>HTML Document Structure and DOM</h2>
+    <p class="definition">
+      Every HTML file follows a standard structure — a doctype declaration, a root html element, a head for metadata,
+      and a body for visible content.
+      The browser reads this and builds the DOM — a live tree of all elements that JavaScript can interact with.
+    </p>
+    <div class="demo-box">
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <p><strong>DOM Tree:</strong> html → head + body → h1 + p</p>
+      <p>Think of the DOM like a family tree. Every element has a parent, and can have children and siblings.</p>
+    </div>
+  </section>
+
+  <!-- HTML Elements and Attributes -->
+  <section id="elements">
+    <h2>HTML Elements and Attributes</h2>
+    <p class="definition">
+      An HTML element is an opening tag, its content, and a closing tag. Attributes are extra information placed inside
+      the opening tag that modify or describe the element.
+    </p>
+    <div class="demo-box">
+      <p>Basic element: <strong>This text is bold</strong></p>
+      <p>Element with attribute: <a href="https://developer.mozilla.org" target="_blank">Visit MDN</a></p>
+      <p>Image with attributes: <img src="https://via.placeholder.com/80x40" alt="A placeholder image" /></p>
+      <pre><code>&lt;a href="https://developer.mozilla.org" target="_blank"&gt;Visit MDN&lt;/a&gt;
+&lt;img src="photo.jpg" alt="Description of image" /&gt;</code></pre>
+    </div>
+  </section>
+
+  <!-- Inline and Block Elements -->
+  <section id="inline-block">
+    <h2>Inline and Block Elements</h2>
+    <p class="definition">
+      Block elements take up the full width of their container and always start on a new line. Inline elements only take
+      up as much space as their content and sit within the flow of text.
+    </p>
+    <div class="demo-box">
+      <p><strong>Block elements — each on its own line:</strong></p>
+      <div style="background:#e0e0e0; padding:0.3rem; margin:0.3rem 0;">I am a DIV — block element</div>
+      <div style="background:#e0e0e0; padding:0.3rem; margin:0.3rem 0;">I am another DIV — I pushed to a new line</div>
+
+      <p><strong>Inline elements — sitting side by side:</strong></p>
+      <p>
+        This is text with
+        <span style="background:#ffd700; padding:0 0.3rem;">a span</span>
+        and
+        <strong>bold text</strong>
+        and
+        <em>italic text</em>
+        all sitting inline.
+      </p>
+    </div>
+  </section>
+
+  <!-- Common HTML Tags -->
+  <section id="common-tags">
+    <h2>Common HTML Tags</h2>
+    <p class="definition">
+      A core set of HTML tags handles the majority of what you see on any webpage — headings, paragraphs, lists, links,
+      images, and containers.
+    </p>
+    <div class="demo-box">
+      <h1 style="margin:0.3rem 0; font-size:1.6rem;">h1 — Main Heading</h1>
+      <h2 style="margin:0.3rem 0; font-size:1.3rem; background:none; color:#1a1a1a; display:block; padding:0;">h2 — Sub
+        Heading</h2>
+      <h3 style="margin:0.3rem 0; font-size:1.1rem;">h3 — Section Heading</h3>
+      <p>A paragraph tag — wraps a block of text.</p>
+      <ul>
+        <li>Unordered list item one</li>
+        <li>Unordered list item two</li>
+      </ul>
+      <ol>
+        <li>Ordered list item one</li>
+        <li>Ordered list item two</li>
+      </ol>
+      <a href="#">A hyperlink tag</a>
+      <br /><br />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9jScWCsWFlgTBNDca-ZSke2b4mJRLBI1I4g&s"
+        alt="HTML Image" />
+      <hr>
+    </div>
+    <p>Above is a horizontal rule — <code>&lt;hr&gt;</code></p>
+    </div>
+  </section>
+
+  <!-- Semantic HTML5 Elements -->
+  <section id="semantic">
+    <h2>Semantic HTML5 Elements</h2>
+    <p class="definition">
+      Semantic elements clearly describe their meaning to both the browser and the developer. Instead of using generic
+      divs everywhere, semantic tags tell you what role that section plays on the page.
+    </p>
+    <div class="demo-box">
+      <header style="background:#ddd; padding:0.5rem; margin-bottom:0.5rem;">
+        <strong>&lt;header&gt;</strong> — site logo, nav, top of page
+      </header>
+      <nav style="background:#e8e8e8; padding:0.5rem; margin-bottom:0.5rem;">
+        <strong>&lt;nav&gt;</strong> — navigation links
+      </nav>
+      <main style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+        <article style="background:#f5f5f5; padding:0.5rem; flex:2;">
+          <strong>&lt;article&gt;</strong> — self-contained content like a blog post
+        </article>
+        <aside style="background:#ececec; padding:0.5rem; flex:1;">
+          <strong>&lt;aside&gt;</strong> — sidebar content
+        </aside>
+      </main>
+      <section style="background:#e0ede0; padding:0.5rem; margin-bottom:0.5rem;">
+        <strong>&lt;section&gt;</strong> — a thematic grouping of content
+      </section>
+      <footer style="background:#ddd; padding:0.5rem;">
+        <strong>&lt;footer&gt;</strong> — bottom of page, copyright, links
+      </footer>
+    </div>
+  </section>
+
+  <!-- HTML Forms -->
+  <section id="forms">
+    <h2>HTML Forms</h2>
+    <p class="definition">
+      A form is a container that collects user input and submits it to a server. The action attribute tells the form
+      where to send the data, and the method tells it how — GET or POST.
+    </p>
+    <div class="demo-box">
+      <form action="/submit" method="POST" style="display:flex; flex-direction:column; gap:0.6rem; max-width:360px;">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" style="padding:0.4rem;" />
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" style="padding:0.4rem;" />
+        <button type="submit"
+          style="padding:0.5rem; background:#1a1a1a; color:#fff; border:none; cursor:pointer;">Submit</button>
+      </form>
+      <pre style="margin-top:1rem;"><code>&lt;form action="/submit" method="POST"&gt;
+  &lt;label for="name"&gt;Your Name&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" /&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+  </section>
+
+  <!-- Form Elements and Attributes -->
+  <section id="form-elements">
+    <h2>Form Elements and Attributes</h2>
+    <p class="definition">
+      HTML provides a rich set of input types and form elements — each designed for a specific kind of data. Choosing
+      the right input type improves usability and triggers the right keyboard on mobile.
+    </p>
+    <div class="demo-box">
+      <form style="display:flex; flex-direction:column; gap:0.8rem; max-width:400px;">
+
+        <label>Text: <input type="text" placeholder="Plain text" style="padding:0.3rem;" /></label>
+        <label>Password: <input type="password" placeholder="This is your super secret password"
+            style="padding:0.3rem;" /></label>
+        <label>Email: <input type="email" placeholder="Email address" style="padding:0.3rem;" /></label>
+        <label>Number: <input type="number" min="0" max="100" style="padding:0.3rem;" /></label>
+        <label>Date: <input type="date" style="padding:0.3rem;" /></label>
+        <label>Range: <input type="range" min="0" max="100" /></label>
+        <label>Checkbox: <input type="checkbox" /> I agree to terms</label>
+
+        <fieldset>
+          <legend>Radio Buttons</legend>
+          <label><input type="radio" name="plan" value="free" /> Free</label>
+          <label><input type="radio" name="plan" value="pro" /> Pro</label>
+          <label><input type="radio" name="plan" value="enterprise" /> Enterprise</label>
+        </fieldset>
+
+        <label>Select / Dropdown:
+          <select style="padding:0.3rem;">
+            <option value="">-- Choose --</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+          </select>
+        </label>
+
+        <label>Textarea:
+          <textarea rows="3" placeholder="Multiline input..." style="padding:0.3rem; width:100%;"></textarea>
+        </label>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- HTML5 Validation -->
+  <section id="validation">
+    <h2>HTML5 Validation</h2>
+    <p class="definition">
+      HTML5 has built-in form validation that runs in the browser before any data is sent to the server. Using
+      attributes like required, minlength, and pattern, you get validation for free — no JavaScript needed.
+    </p>
+    <div class="demo-box">
+      <form style="display:flex; flex-direction:column; gap:0.8rem; max-width:360px;">
+        <label for="vname">Name (required):</label>
+        <input type="text" id="vname" name="vname" required minlength="3" placeholder="Min 3 characters"
+          style="padding:0.4rem;" />
+
+        <label for="vemail">Email (must be valid):</label>
+        <input type="email" id="vemail" name="vemail" required placeholder="you@example.com" style="padding:0.4rem;" />
+
+        <label for="vage">Age (18–99):</label>
+        <input type="number" id="vage" name="vage" min="18" max="99" style="padding:0.4rem;" />
+
+        <label for="vcode">Postal Code (pattern: 6 digits):</label>
+        <input type="text" id="vcode" name="vcode" pattern="\d{6}" placeholder="e.g. 411001" style="padding:0.4rem;" />
+
+        <button type="submit" style="padding:0.5rem; background:#1a1a1a; color:#fff; border:none; cursor:pointer;">
+          Try Submitting
+        </button>
+      </form>
+      <p style="margin-top:0.8rem; font-size:0.9rem; color:#555;">
+        Try clicking Submit without filling fields — browser validation kicks in automatically.
+      </p>
+    </div>
+  </section>
+
+</body>
+
+</html>

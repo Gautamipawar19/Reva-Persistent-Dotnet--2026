@@ -1,0 +1,674 @@
+/* ============================================================
+   CSS Foundations & Features
+   Companion stylesheet for css-foundations.html
+   Each section matches a topic heading in the HTML file
+   ============================================================ */
+
+/* ============================================================
+   BASE / RESET
+   Minimal base styles to keep demos clean and readable
+   ============================================================ */
+
+:root {
+  --color-primary: #2563eb;
+  --color-accent: #f59e0b;
+  --color-neutral: #6b7280;
+  --color-bg: #fdfcf9;
+  --color-ink: #1a1a1a;
+  --font-base: Georgia, serif;
+  --font-mono: 'Courier New', monospace;
+  --radius: 6px;
+  --spacing: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.7;
+}
+
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 4px solid var(--color-ink);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 3rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--color-ink);
+  color: var(--color-bg);
+  display: inline-block;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 0.8rem 0 0.3rem;
+}
+
+p.definition {
+  font-style: italic;
+  color: #444;
+  border-left: 3px solid #ccc;
+  padding-left: 1rem;
+  margin: 0.8rem 0 1.2rem;
+}
+
+.demo-box {
+  border: 2px dashed #aaa;
+  padding: 1.2rem;
+  margin: 1rem 0;
+  background: #fff;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 0.6rem;
+  font-style: italic;
+}
+
+.code-preview {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  line-height: 1.6;
+  white-space: pre;
+}
+
+/* ============================================================
+   TOP NAVIGATION
+   Sticky anchor nav for jumping between sections
+   ============================================================ */
+
+.top-nav {
+  background: var(--color-ink);
+  padding: 0.8rem 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+.top-nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+   Overview of CSS
+   ============================================================ */
+
+.css-overview-demo {
+  background: #fff3cd;
+  color: #856404;
+  font-size: 1.1rem;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #f59e0b;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* ============================================================
+   Inline, Internal, and External Stylesheets
+   ============================================================ */
+
+.internal-demo {
+  color: #1d4ed8;
+  background: #eff6ff;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius);
+}
+
+.external-demo {
+  color: #065f46;
+  background: #ecfdf5;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius);
+  margin-top: 0.4rem;
+}
+
+/* ============================================================
+   CSS Selectors (Element, Class, ID)
+   ============================================================ */
+
+/* Element selector — targets all p inside demo-box */
+.demo-box p {
+  margin: 0.4rem 0;
+}
+
+/* Class selector */
+.highlight-class {
+  background: #fef08a;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+}
+
+/* ID selector */
+#unique-id {
+  background: #fce7f3;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius);
+  color: #9d174d;
+  font-weight: bold;
+}
+
+/* ============================================================
+   CSS Box Model
+   ============================================================ */
+
+.box-model-demo {
+  background: #bfdbfe;
+  margin: 20px;
+  border: 4px solid #1d4ed8;
+  padding: 24px;
+  display: inline-block;
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 20px #fef9c3;
+}
+
+.box-model-demo span {
+  background: #1d4ed8;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   CSS Properties and Values
+   ============================================================ */
+
+.prop-color   { color: steelblue; }
+.prop-bg      { background-color: #fff3cd; padding: 0.2rem 0.4rem; }
+.prop-font    { font-size: 1.3rem; }
+.prop-weight  { font-weight: bold; }
+.prop-spacing { letter-spacing: 0.2em; }
+.prop-transform { text-transform: uppercase; font-size: 0.85rem; }
+.prop-radius  {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+  display: inline-block;
+}
+
+/* ============================================================
+   Flexbox Layout
+   ============================================================ */
+
+.flex-item {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.flex-row-demo {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.flex-column-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  max-width: 160px;
+}
+
+.flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background: #f0f9ff;
+  border: 2px dashed #93c5fd;
+}
+
+/* ============================================================
+   CSS Grid
+   ============================================================ */
+
+.grid-item {
+  background: #7c3aed;
+  color: white;
+  padding: 0.6rem;
+  border-radius: var(--radius);
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+.grid-basic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.grid-span {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.span-full { grid-column: 1 / -1; }
+.span-two  { grid-column: span 2; }
+
+/* ============================================================
+   CSS Variables
+   ============================================================ */
+
+.var-box {
+  padding: 0.8rem 1rem;
+  color: white;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.var-box.primary  { background: var(--color-primary); }
+.var-box.accent   { background: var(--color-accent); color: #1a1a1a; }
+.var-box.neutral  { background: var(--color-neutral); }
+
+/* ============================================================
+   Transitions and Animations
+   ============================================================ */
+
+.transition-demo {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  display: inline-block;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.transition-demo:hover {
+  background: #f59e0b;
+  color: #1a1a1a;
+  transform: scale(1.05);
+  letter-spacing: 0.05em;
+}
+
+@keyframes pulse-bg {
+  0%   { background: #7c3aed; }
+  50%  { background: #f59e0b; color: #1a1a1a; }
+  100% { background: #7c3aed; }
+}
+
+.animation-demo {
+  background: #7c3aed;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  display: inline-block;
+  border-radius: var(--radius);
+  animation: pulse-bg 2s infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fadein-demo {
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius);
+  animation: fadeIn 1s ease both;
+  border: 1px solid #6ee7b7;
+}
+
+/* ============================================================
+   Box Shadow and Text Shadow
+   ============================================================ */
+
+.shadow-demos {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.shadow-demos > div {
+  padding: 0.8rem 1.2rem;
+  background: white;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.box-shadow-soft    { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.box-shadow-hard    { box-shadow: 4px 4px 0 #1a1a1a; }
+.box-shadow-inset   { box-shadow: inset 0 2px 8px rgba(0,0,0,0.2); background: #f0f0f0 !important; }
+.box-shadow-colored { box-shadow: 0 4px 20px rgba(37, 99, 235, 0.5); }
+
+.text-shadow-soft    { font-size: 1.4rem; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.text-shadow-hard    { font-size: 1.4rem; font-weight: bold; text-shadow: 3px 3px 0 #1a1a1a; color: #f59e0b; }
+.text-shadow-colored { font-size: 1.4rem; font-weight: bold; text-shadow: 0 0 12px #2563eb, 0 0 24px #2563eb; color: white; background: #1a1a1a; display: inline-block; padding: 0.3rem 0.8rem; }
+
+/* ============================================================
+   Sibling Selectors
+   ============================================================ */
+
+/* Adjacent sibling: p immediately after h3.sibling-trigger */
+.sibling-trigger + p {
+  background: #fef9c3;
+  padding: 0.4rem 0.8rem;
+  border-left: 3px solid #f59e0b;
+  font-weight: bold;
+}
+
+/* General sibling: all li after li.active-item */
+.active-item ~ li {
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.active-item {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.sibling-list {
+  padding-left: 1.5rem;
+}
+
+/* ============================================================
+   Pseudo-classes and Pseudo-elements
+   ============================================================ */
+
+.pseudo-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.pseudo-link:hover {
+  color: #f59e0b;
+  text-decoration: underline;
+}
+
+.pseudo-list {
+  padding-left: 1.5rem;
+  margin: 0.8rem 0;
+}
+
+.pseudo-list li:first-child {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.pseudo-list li:last-child {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.before-after-demo {
+  position: relative;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+}
+
+.before-after-demo::before {
+  content: "▶ ";
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
+.before-after-demo::after {
+  content: " ◀";
+  color: #f59e0b;
+  font-size: 0.8rem;
+}
+
+.first-line-demo::first-line {
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 1.05rem;
+}
+
+/* ============================================================
+   Advanced Selectors
+   ============================================================ */
+
+/* Attribute selector */
+input[type="text"] {
+  border: 2px solid #16a34a;
+  padding: 0.4rem;
+  display: block;
+  margin: 0.4rem 0;
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 320px;
+}
+
+input[type="email"] {
+  border: 2px solid var(--color-primary);
+  padding: 0.4rem;
+  display: block;
+  margin: 0.4rem 0;
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 320px;
+}
+
+/* nth-child */
+.nth-list {
+  padding-left: 1.5rem;
+}
+
+.nth-list li:nth-child(even) {
+  background: #f0f9ff;
+  padding-left: 0.5rem;
+}
+
+/* :not() */
+.not-demo {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.btn-demo:not(.disabled) {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.btn-demo.disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* ============================================================
+   Cascading and Specificity
+   ============================================================ */
+
+/* Element selector — score 0-0-1 */
+.specificity-demo-tag {
+  color: #6b7280;
+  padding: 0.3rem 0.6rem;
+}
+
+/* Class selector — score 0-1-0, overrides element */
+.specificity-demo-class {
+  color: var(--color-primary) !important;
+  background: #eff6ff;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius);
+}
+
+/* ID selector — score 1-0-0, overrides class */
+#specificity-demo-id {
+  color: #dc2626 !important;
+  background: #fef2f2 !important;
+  border: 2px solid #dc2626;
+}
+
+.specificity-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.specificity-table th,
+.specificity-table td {
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.8rem;
+}
+
+.specificity-table th {
+  background: #f0f0f0;
+}
+
+/* ============================================================
+   Responsive Web Design
+   ============================================================ */
+
+.rwd-demo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.rwd-card {
+  background: var(--color-primary);
+  color: white;
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 600px) {
+  .rwd-demo {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   Media Queries
+   ============================================================ */
+
+.media-demo {
+  padding: 1rem;
+  background: #ecfdf5;
+  border-radius: var(--radius);
+}
+
+.media-text {
+  font-weight: bold;
+  color: #065f46;
+}
+
+@media (max-width: 600px) {
+  .media-text::after {
+    content: " — You are on a SMALL screen";
+    color: #dc2626;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .media-text::after {
+    content: " — You are on a MEDIUM screen";
+    color: #f59e0b;
+  }
+}
+
+@media (min-width: 1025px) {
+  .media-text::after {
+    content: " — You are on a LARGE screen";
+    color: #16a34a;
+  }
+}
+
+/* ============================================================
+   Responsive Units
+   ============================================================ */
+
+.units-demo > * {
+  margin-bottom: 0.6rem;
+}
+
+.unit-px     { font-size: 16px; }
+.unit-rem    { font-size: 1.5rem; color: var(--color-primary); }
+.unit-em     { font-size: 1.2em; color: #7c3aed; }
+
+.unit-percent {
+  width: 60%;
+  background: #fef9c3;
+  padding: 0.4rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.unit-vw {
+  width: 50vw;
+  background: #fce7f3;
+  padding: 0.4rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  max-width: 100%;
+}
+
+.unit-vh {
+  height: 10vh;
+  background: #e0e7ff;
+  padding: 0.4rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+}

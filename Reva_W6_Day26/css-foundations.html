@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Foundations</title>
+  <link rel="stylesheet" href="css-foundations.css" />
+</head>
+
+<body>
+
+  <h1>CSS Foundations &amp; Features</h1>
+
+  <nav class="top-nav">
+    <a style="display:block" href="#overview">Overview</a>
+    <a style="display:block" href="#stylesheets">Stylesheets</a>
+    <a style="display:block" href="#selectors">Selectors</a>
+    <a style="display:block" href="#box-model">Box Model</a>
+    <a style="display:block" href="#properties">Properties</a>
+    <a style="display:block" href="#flexbox">Flexbox</a>
+    <a style="display:block" href="#grid">Grid</a>
+    <a style="display:block" href="#variables">Variables</a>
+    <a style="display:block" href="#transitions">Transitions</a>
+    <a style="display:block" href="#shadows">Shadows</a>
+    <a style="display:block" href="#sibling">Sibling Selectors</a>
+    <a style="display:block" href="#pseudo">Pseudo-classes</a>
+    <a style="display:block" href="#advanced-sel">Advanced Selectors</a>
+    <a style="display:block" href="#cascade">Cascade &amp; Specificity</a>
+    <a style="display:block" href="#rwd">Responsive Design</a>
+    <a style="display:block" href="#media">Media Queries</a>
+    <a style="display:block" href="#mobile-first">Mobile First</a>
+    <a style="display:block" href="#viewport">Viewport Meta</a>
+    <a style="display:block" href="#units">Responsive Units</a>
+  </nav>
+
+  <!-- Overview of CSS -->
+  <section id="overview">
+    <h2>Overview of CSS</h2>
+    <p class="definition">CSS (Cascading Style Sheets) is the language that controls how HTML elements look. It
+      separates presentation from structure — HTML says what something is, CSS says how it looks.</p>
+    <div class="demo-box">
+      <p class="css-overview-demo">This paragraph is styled with CSS — color, font size, and background all come from
+        the stylesheet.</p>
+    </div>
+  </section>
+
+  <!-- Inline, Internal, and External Stylesheets -->
+  <section id="stylesheets">
+    <h2>Inline, Internal, and External Stylesheets</h2>
+    <p class="definition">CSS can be written in three places — directly on an element (inline), inside a style tag in
+      the HTML head (internal), or in a separate .css file linked to the HTML (external). External is the professional
+      standard.</p>
+    <div class="demo-box">
+      <p style="color: tomato; font-weight: bold;">Inline style — written directly on this element using the style
+        attribute.</p>
+      <p class="internal-demo">Internal style — would live inside a &lt;style&gt; tag in the &lt;head&gt;.</p>
+      <p class="external-demo">External style — this paragraph is styled from css-foundations.css (the file you're
+        reading).</p>
+    </div>
+  </section>
+
+  <!-- CSS Selectors (Element, Class, ID) -->
+  <section id="selectors">
+    <h2>CSS Selectors (Element, Class, ID)</h2>
+    <p class="definition">Selectors tell CSS which HTML elements to target. An element selector targets all tags of that
+      type, a class selector targets elements sharing a class, and an ID selector targets one unique element.</p>
+    <div class="demo-box">
+      <p>Element selector — targets all &lt;p&gt; tags</p>
+      <p class="highlight-class">Class selector — targets elements with class="highlight-class"</p>
+      <p id="unique-id">ID selector — targets only this element with id="unique-id"</p>
+    </div>
+  </section>
+
+  <!-- CSS Box Model -->
+  <section id="box-model">
+    <h2>CSS Box Model</h2>
+    <p class="definition">Every HTML element is a rectangular box. The box model describes four layers around the
+      content — padding (inner space), border (the edge), and margin (outer space). Understanding this is fundamental to
+      layout.</p>
+    <div class="demo-box">
+      <div class="box-model-demo">
+        <span>Content</span>
+      </div>
+      <p class="hint">Outer grey = margin &nbsp;|&nbsp; Dark border = border &nbsp;|&nbsp; Inner space = padding
+        &nbsp;|&nbsp; Center = content</p>
+    </div>
+  </section>
+
+  <!-- CSS Properties and Values -->
+  <section id="properties">
+    <h2>CSS Properties and Values</h2>
+    <p class="definition">A CSS rule is made of a property (what to change) and a value (what to change it to).
+      Properties cover everything from color and font to spacing, size, and display behavior.</p>
+    <div class="demo-box">
+      <div class="properties-demo">
+        <p class="prop-color">color: steelblue — changes text color</p>
+        <p class="prop-bg">background-color: #fff3cd — changes background</p>
+        <p class="prop-font">font-size: 1.3rem — changes text size</p>
+        <p class="prop-weight">font-weight: bold — makes text bold</p>
+        <p class="prop-spacing">letter-spacing: 0.2em — spreads letters apart</p>
+        <p class="prop-transform">text-transform: uppercase — forces caps</p>
+        <p class="prop-radius">border-radius: 8px — rounds corners</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flexbox Layout -->
+  <section id="flexbox">
+    <h2>Flexbox Layout</h2>
+    <p class="definition">Flexbox is a one-dimensional layout system that arranges items in a row or column. It makes
+      alignment, spacing, and distribution of elements intuitive without using floats or manual positioning.</p>
+    <div class="demo-box">
+      <p><strong>Row (default):</strong></p>
+      <div class="flex-row-demo">
+        <div class="flex-item">One</div>
+        <div class="flex-item">Two</div>
+        <div class="flex-item">Three</div>
+        <div class="flex-item">Four</div>
+      </div>
+      <p><strong>Row with space-between:</strong></p>
+      <div class="flex-space-between">
+        <div class="flex-item">Left</div>
+        <div class="flex-item">Center</div>
+        <div class="flex-item">Right</div>
+      </div>
+      <p><strong>Column:</strong></p>
+      <div class="flex-column-demo">
+        <div class="flex-item">Top</div>
+        <div class="flex-item">Middle</div>
+        <div class="flex-item">Bottom</div>
+      </div>
+      <p><strong>Centered (both axes):</strong></p>
+      <div class="flex-centered">
+        <div class="flex-item">Centered!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CSS Grid -->
+  <section id="grid">
+    <h2>CSS Grid</h2>
+    <p class="definition">CSS Grid is a two-dimensional layout system that lets you define rows and columns and place
+      elements precisely within them. It is the most powerful layout tool CSS offers.</p>
+    <div class="demo-box">
+      <p><strong>3-column grid:</strong></p>
+      <div class="grid-basic">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+      <p><strong>Grid with spanning item:</strong></p>
+      <div class="grid-span">
+        <div class="grid-item span-full">Header (spans all 3 columns)</div>
+        <div class="grid-item">Sidebar</div>
+        <div class="grid-item span-two">Main Content (spans 2)</div>
+        <div class="grid-item span-full">Footer (spans all 3)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CSS Variables -->
+  <section id="variables">
+    <h2>CSS Variables</h2>
+    <p class="definition">CSS Variables (custom properties) let you store values in one place and reuse them throughout
+      your stylesheet. Change the variable once and it updates everywhere — great for themes and consistency.</p>
+    <div class="demo-box">
+      <div class="vars-demo">
+        <div class="var-box primary">Primary Color from --color-primary</div>
+        <div class="var-box accent">Accent Color from --color-accent</div>
+        <div class="var-box neutral">Neutral Color from --color-neutral</div>
+        <p style="margin-top:0.8rem; font-size:0.9rem; color:#555;">All three boxes use variables defined at :root —
+          change one variable and every box updates.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transitions and Animations -->
+  <section id="transitions">
+    <h2>Transitions and Animations</h2>
+    <p class="definition">Transitions smoothly animate a change from one CSS state to another — like a hover effect.
+      Animations use keyframes to define multi-step motion sequences that can run on their own.</p>
+    <div class="demo-box">
+      <p><strong>Transition on hover (hover over the box):</strong></p>
+      <div class="transition-demo">Hover over me</div>
+      <p><strong>Keyframe animation (continuous):</strong></p>
+      <div class="animation-demo">I'm animating</div>
+      <p><strong>Fade in on load:</strong></p>
+      <div class="fadein-demo">I faded in when the page loaded</div>
+    </div>
+  </section>
+
+  <!-- Box Shadow and Text Shadow -->
+  <section id="shadows">
+    <h2>Box Shadow and Text Shadow</h2>
+    <p class="definition">box-shadow adds a shadow behind an element's box. text-shadow adds a shadow behind text. Both
+      accept offset, blur radius, and color values to control the shadow's look.</p>
+    <div class="demo-box">
+      <div class="shadow-demos">
+        <div class="box-shadow-soft">Soft shadow</div>
+        <div class="box-shadow-hard">Hard shadow</div>
+        <div class="box-shadow-inset">Inset shadow</div>
+        <div class="box-shadow-colored">Colored glow</div>
+      </div>
+      <p class="text-shadow-soft">Text with soft shadow</p>
+      <p class="text-shadow-hard">Text with hard shadow</p>
+      <p class="text-shadow-colored">Text with colored shadow</p>
+    </div>
+  </section>
+
+  <!-- Sibling Selectors -->
+  <section id="sibling">
+    <h2>Sibling Selectors</h2>
+    <p class="definition">Sibling selectors target elements that share the same parent. The adjacent sibling selector
+      (+) targets the element immediately after another, while the general sibling selector (~) targets all siblings
+      that follow.</p>
+    <div class="demo-box">
+      <p><strong>Adjacent sibling (+) — only the p right after h3 gets styled:</strong></p>
+      <h3 class="sibling-trigger">I am an h3</h3>
+      <p class="after-h3">I am the adjacent sibling — I get special styling</p>
+      <p>I am a regular paragraph — not styled by the sibling selector</p>
+
+      <p><strong>General sibling (~) — all li after the active one get styled:</strong></p>
+      <ul class="sibling-list">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li class="active-item">Active Item</li>
+        <li>Item Four — styled by ~</li>
+        <li>Item Five — also styled by ~</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Pseudo-classes and Pseudo-elements -->
+  <section id="pseudo">
+    <h2>Pseudo-classes and Pseudo-elements</h2>
+    <p class="definition">Pseudo-classes style elements based on their state or position (like :hover, :first-child).
+      Pseudo-elements style a specific part of an element (like ::before, ::after, ::first-line).</p>
+    <div class="demo-box">
+      <p><strong>Pseudo-classes:</strong></p>
+      <a href="#" class="pseudo-link">Hover over this link</a>
+      <ul class="pseudo-list">
+        <li>First child — styled with :first-child</li>
+        <li>Second child</li>
+        <li>Third child</li>
+        <li>Last child — styled with :last-child</li>
+      </ul>
+
+      <p><strong>Pseudo-elements:</strong></p>
+      <p class="before-after-demo">This paragraph has ::before and ::after content added via CSS</p>
+      <p class="first-line-demo">This paragraph uses ::first-line to style only the first line differently from the rest
+        of the paragraph text which continues on subsequent lines.</p>
+    </div>
+  </section>
+
+  <!-- Advanced Selectors -->
+  <section id="advanced-sel">
+    <h2>Advanced Selectors</h2>
+    <p class="definition">Advanced selectors let you target elements with surgical precision — based on attributes,
+      position, negation, or complex combinations. They eliminate the need for extra classes in your HTML.</p>
+    <div class="demo-box">
+      <p><strong>Attribute selector — input[type="text"] gets a green border:</strong></p>
+      <input type="text" placeholder="text input — green border" />
+      <input type="email" placeholder="email input — different style" />
+
+      <p><strong>:nth-child — every even row gets shading:</strong></p>
+      <ul class="nth-list">
+        <li>Row 1</li>
+        <li>Row 2 — even</li>
+        <li>Row 3</li>
+        <li>Row 4 — even</li>
+        <li>Row 5</li>
+      </ul>
+
+      <p><strong>:not() — all buttons except .disabled get full opacity:</strong></p>
+      <div class="not-demo">
+        <button class="btn-demo">Active Button</button>
+        <button class="btn-demo disabled">Disabled Button</button>
+        <button class="btn-demo">Active Button</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cascading and Specificity -->
+  <section id="cascade">
+    <h2>Cascading and Specificity</h2>
+    <p class="definition">When multiple CSS rules target the same element, the cascade determines which one wins.
+      Specificity is the scoring system — IDs score highest, then classes, then element tags. When scores tie, the last
+      rule wins.</p>
+    <div class="demo-box">
+      <p class="specificity-demo-tag">Styled by element selector (lowest specificity)</p>
+      <p class="specificity-demo-tag specificity-demo-class">Class overrides element selector (higher specificity)</p>
+      <p class="specificity-demo-tag specificity-demo-class" id="specificity-demo-id">ID overrides class (highest
+        specificity)</p>
+      <table class="specificity-table">
+        <tr>
+          <th>Selector</th>
+          <th>Score</th>
+          <th>Example</th>
+        </tr>
+        <tr>
+          <td>Element</td>
+          <td>0-0-1</td>
+          <td>p { }</td>
+        </tr>
+        <tr>
+          <td>Class</td>
+          <td>0-1-0</td>
+          <td>.title { }</td>
+        </tr>
+        <tr>
+          <td>ID</td>
+          <td>1-0-0</td>
+          <td>#header { }</td>
+        </tr>
+        <tr>
+          <td>Inline style</td>
+          <td>1-0-0-0</td>
+          <td>style=""</td>
+        </tr>
+        <tr>
+          <td>!important</td>
+          <td>Overrides all</td>
+          <td>color: red !important</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Responsive Web Design -->
+  <section id="rwd">
+    <h2>Responsive Web Design</h2>
+    <p class="definition">Responsive web design means your layout adapts gracefully to any screen size — desktop,
+      tablet, or phone. It combines flexible grids, fluid images, and media queries to deliver the right experience on
+      every device.</p>
+    <div class="demo-box">
+      <div class="rwd-demo">
+        <div class="rwd-card">Card One</div>
+        <div class="rwd-card">Card Two</div>
+        <div class="rwd-card">Card Three</div>
+      </div>
+      <p class="hint">Resize your browser window — the cards reflow from 3 columns to 1 column.</p>
+    </div>
+  </section>
+
+  <!-- Media Queries -->
+  <section id="media">
+    <h2>Media Queries</h2>
+    <p class="definition">Media queries apply CSS rules only when certain conditions are met — like screen width,
+      orientation, or print mode. They are the mechanism behind responsive design.</p>
+    <div class="demo-box">
+      <div class="media-demo">
+        <p class="media-text">Resize your browser to see this change.</p>
+      </div>
+      <pre class="code-preview">@media (max-width: 768px) {
+  .container { flex-direction: column; }
+}
+@media (min-width: 1200px) {
+  .container { max-width: 1140px; }
+}
+@media print {
+  nav, footer { display: none; }
+}</pre>
+    </div>
+  </section>
+
+  <!-- Mobile-First Approach -->
+  <section id="mobile-first">
+    <h2>Mobile-First Approach</h2>
+    <p class="definition">Mobile-first means you write your base CSS for small screens, then use min-width media queries
+      to progressively enhance the layout for larger screens. It ensures the core experience works on the smallest
+      device first.</p>
+    <div class="demo-box">
+      <pre class="code-preview">/* Base styles — mobile */
+.card {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Tablet and above */
+@media (min-width: 600px) {
+  .card { width: 48%; }
+}
+
+/* Desktop and above */
+@media (min-width: 1024px) {
+  .card { width: 30%; }
+}</pre>
+      <p class="hint">Mobile-first vs desktop-first: Start small, scale up. Not the other way around.</p>
+    </div>
+  </section>
+
+  <!-- Viewport Meta Tag -->
+  <section id="viewport">
+    <h2>Viewport Meta Tag</h2>
+    <p class="definition">The viewport meta tag tells mobile browsers not to zoom out and fake a desktop layout. Without
+      it, your perfectly written responsive CSS will be ignored on phones. It belongs in every HTML file.</p>
+    <div class="demo-box">
+      <pre class="code-preview">&lt;!-- Always include this in your &lt;head&gt; --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+
+&lt;!-- width=device-width: match screen width --&gt;
+&lt;!-- initial-scale=1.0: don't zoom in or out on load --&gt;</pre>
+      <p class="hint">Without this tag, a phone renders the page as if it were 980px wide and then scales it down —
+        making text tiny and media queries useless.</p>
+    </div>
+  </section>
+
+  <!-- Responsive Units (rem, em, %, vw, vh) -->
+  <section id="units">
+    <h2>Responsive Units (rem, em, %, vw, vh)</h2>
+    <p class="definition">Responsive units scale relative to something else — the root font size, the parent element, or
+      the viewport. Using them instead of fixed pixels makes layouts naturally fluid and accessible.</p>
+    <div class="demo-box">
+      <div class="units-demo">
+        <p class="unit-px">font-size: 16px — fixed, never changes</p>
+        <p class="unit-rem">font-size: 1.5rem — 1.5x the root font size (usually 24px)</p>
+        <p class="unit-em">font-size: 1.2em — 1.2x the parent's font size</p>
+        <div class="unit-percent">width: 60% — 60% of the parent container</div>
+        <div class="unit-vw">width: 50vw — 50% of the viewport width</div>
+        <div class="unit-vh">height: 10vh — 10% of the viewport height</div>
+      </div>
+      <table class="specificity-table" style="margin-top:1rem;">
+        <tr>
+          <th>Unit</th>
+          <th>Relative To</th>
+          <th>Best For</th>
+        </tr>
+        <tr>
+          <td>px</td>
+          <td>Absolute</td>
+          <td>Borders, fine detail</td>
+        </tr>
+        <tr>
+          <td>rem</td>
+          <td>Root font size</td>
+          <td>Font sizes, spacing</td>
+        </tr>
+        <tr>
+          <td>em</td>
+          <td>Parent font size</td>
+          <td>Component-scoped sizing</td>
+        </tr>
+        <tr>
+          <td>%</td>
+          <td>Parent dimension</td>
+          <td>Fluid widths</td>
+        </tr>
+        <tr>
+          <td>vw</td>
+          <td>Viewport width</td>
+          <td>Full-width sections</td>
+        </tr>
+        <tr>
+          <td>vh</td>
+          <td>Viewport height</td>
+          <td>Full-height hero sections</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+</body>
+
+</html>
